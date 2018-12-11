@@ -40,7 +40,7 @@ if __name__ == '__main__':
     import json
     page = requests.get('http://www.last.fm/user/Zaphodb65')
     if page.status_code != 200:
-        die("shitfail")
+        die("Failed to connect to last.fm")
 
     tracks = scrape_from_string(page.content)
 
